@@ -1,0 +1,20 @@
+definitions:
+  env_versions: &env_versions
+    xcode: 14.3
+  triggering:
+    push: &push_event
+      events:
+        - push
+  scripts:
+    - &runBenchmarkTests
+      name: Run benchmark tests
+      script: sh benchmark.sh
+workflows:
+  ios-m2-mac-mini-workflow:
+    name: iOS M2 Mac Mini Workflow
+    environment:
+      <<: *env_versions
+    triggering:
+      <<: *push_event
+    scripts:
+      - *runBenchmarkTests
