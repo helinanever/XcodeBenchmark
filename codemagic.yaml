@@ -1,6 +1,6 @@
 workflows:
   run_benchmarks:
-    name: Run benchmarks on M2
+    name: Run benchmarks
     environment:
       xcode: 14.3
     triggering:
