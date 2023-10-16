@@ -21,9 +21,9 @@ workflows:
 workflows:
   ios-intel:
     name: iOS Mac Pro workflow
+    instance_type: mac_pro
     environment:
       xcode: latest
-      instance_type: mac_pro
     triggering:
       <<: *push_event
     scripts:
