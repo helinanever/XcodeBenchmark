@@ -18,3 +18,12 @@ workflows:
       <<: *push_event
     scripts:
       - *runBenchmarkTests
+workflows:
+  ios-intel:
+    name: iOS Mac Pro workflow
+    environment:
+      <<: *env_versions
+    triggering:
+      <<: *push_event
+    scripts:
+      - *runBenchmarkTests
