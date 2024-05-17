@@ -19,7 +19,6 @@ workflows:
       <<: *push_event
     scripts:
       - *runBenchmarkTests
-workflows:
   ios-intel:
     name: iOS Mac Pro workflow
     instance_type: mac_pro
