@@ -1,6 +1,6 @@
 definitions:
   env_versions: &env_versions
-    xcode: latest
+    xcode: 15.4
   triggering:
     push: &push_event
       events:
@@ -12,6 +12,7 @@ definitions:
 workflows:
   ios-m2-mac-mini-workflow:
     name: iOS M2 Mac Mini Workflow
+    instance_type: mac_mini_m2
     environment:
       <<: *env_versions
     triggering:
@@ -21,7 +22,7 @@ workflows:
 workflows:
   ios-intel:
     name: iOS Mac Pro workflow
-    instance_type: mac_mini_m2
+    instance_type: mac_pro
     environment:
       xcode: latest
     triggering:
