@@ -21,7 +21,7 @@ workflows:
 workflows:
   ios-intel:
     name: iOS Mac Pro workflow
-    instance_type: mac_pro
+    instance_type: mac_mini_m2
     environment:
       xcode: latest
     triggering:
